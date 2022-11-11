@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>city_events.Repository</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\city-events.Entity\city-events.Entity.csproj" />
+    
+  </ItemGroup>
+
+</Project>

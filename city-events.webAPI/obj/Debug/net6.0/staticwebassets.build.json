@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MFgwxk/WPkwfbFXLsy2a5djC1WKbj9CV/O2+CEHzmkw=",
+  "Source": "city-events.webAPI",
+  "BasePath": "_content/city-events.webAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

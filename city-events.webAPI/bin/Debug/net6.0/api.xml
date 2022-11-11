@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>city-events.webAPI</name>
+    </assembly>
+    <members>
+        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtentions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use serilog configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtentions.AppExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use swagger configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add swagger settings
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:city_events.webAPI.Controllers.UsersController">
+            <summary>
+            Doctors endpoints
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.#ctor(city_events.Repository.IRepository{city_events.Entity.Models.User})">
+            <summary>
+            Users controller
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.GetUsers">
+            <summary>
+            Get users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.DeleteUsers(city_events.Entity.Models.User)">
+            <summary>
+            Delete users
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.PostUsers(city_events.Entity.Models.User)">
+            <summary>
+            Post users
+            </summary>
+            <param name="users"></param>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.Updatesers(city_events.Entity.Models.User)">
+            <summary>
+            Update users
+            </summary>
+            <param name="users"></param>
+        </member>
+    </members>
+</doc>

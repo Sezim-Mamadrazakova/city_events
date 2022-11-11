@@ -1,0 +1,14 @@
+C:\net_project\city-events.Entity\bin\Debug\net6.0\city-events.Entity.deps.json
+C:\net_project\city-events.Entity\bin\Debug\net6.0\city-events.Entity.runtimeconfig.json
+C:\net_project\city-events.Entity\bin\Debug\net6.0\city-events.Entity.dll
+C:\net_project\city-events.Entity\bin\Debug\net6.0\city-events.Entity.pdb
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.csproj.AssemblyReference.cache
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.AssemblyInfoInputs.cache
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.AssemblyInfo.cs
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.csproj.CoreCompileInputs.cache
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.dll
+C:\net_project\city-events.Entity\obj\Debug\net6.0\refint\city-events.Entity.dll
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.pdb
+C:\net_project\city-events.Entity\obj\Debug\net6.0\city-events.Entity.genruntimeconfig.cache
+C:\net_project\city-events.Entity\obj\Debug\net6.0\ref\city-events.Entity.dll

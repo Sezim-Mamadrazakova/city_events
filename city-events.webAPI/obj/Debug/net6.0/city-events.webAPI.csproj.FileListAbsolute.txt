@@ -81,3 +81,11 @@ C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Entity.dll
 C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Repository.dll
 C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Entity.pdb
 C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Repository.pdb
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Services.dll
+C:\net_project\city-events.webAPI\bin\Debug\net6.0\city-events.Services.pdb

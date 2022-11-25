@@ -4,69 +4,195 @@
         <name>city-events.webAPI</name>
     </assembly>
     <members>
-        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtentions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Use serilog configuration
             </summary>
             <param name="app"></param>
         </member>
-        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtentions.AppExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Use swagger configuration
             </summary>
             <param name="app"></param>
         </member>
-        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Add serilog configuration
             </summary>
             <param name="builder"></param>
         </member>
-        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddMapperConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add serilog configuration
             </summary>
             <param name="builder"></param>
         </member>
-        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtentions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add swagger settings
             </summary>
             <param name="services"></param>
         </member>
-        <member name="T:city_events.webAPI.Controllers.UsersController">
+        <member name="T:city_events.webAPI.Controllers.AdminController">
             <summary>
-            Doctors endpoints
             </summary>
         </member>
-        <member name="M:city_events.webAPI.Controllers.UsersController.#ctor(city_events.Repository.IRepository{city_events.Entity.Models.User})">
+        <member name="M:city_events.webAPI.Controllers.AdminController.#ctor(city_events.Services.Abstract.IAdminService,AutoMapper.IMapper)">
+            <summary>
+            admin controller
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.AdminController.GetAdmins(System.Int32,System.Int32)">
+            <summary>
+            Get admin by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.AdminController.DeleteAdmin(System.Guid)">
+            <summary>
+            Delete admin
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.AdminController.GetAdmin(System.Guid)">
+            <summary>
+            Get admin
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.AdminController.UpdateAdmin(System.Guid,city_events.webAPI.Models.UpdateAdminRequest)">
+            <summary>
+            Update admin
+            </summary>
+        </member>
+        <member name="T:city_events.webAPI.Controllers.CityController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.#ctor(city_events.Services.Abstract.ICityService,AutoMapper.IMapper)">
+            <summary>
+            Cities controller
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.GetCitys(System.Int32,System.Int32)">
+            <summary>
+            Get cities by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.DeleteCity(System.Guid)">
+            <summary>
+            Delete events
+            </summary>
+            <param name="cities"></param>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.GetCity(System.Guid)">
+            <summary>
+            Get city
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.UpdateCity(System.Guid,city_events.webAPI.Models.UpdateCityRequest)">
+            <summary>
+            Update event
+            </summary>
+        </member>
+        <member name="T:city_events.webAPI.Controllers.EventController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.EventController.#ctor(city_events.Services.Abstract.IEventService,AutoMapper.IMapper)">
             <summary>
             Users controller
             </summary>
         </member>
-        <member name="M:city_events.webAPI.Controllers.UsersController.GetUsers">
+        <member name="M:city_events.webAPI.Controllers.EventController.GetEvents(System.Int32,System.Int32)">
             <summary>
-            Get users
+            Get events by pages
             </summary>
             <returns></returns>
         </member>
-        <member name="M:city_events.webAPI.Controllers.UsersController.DeleteUsers(city_events.Entity.Models.User)">
+        <member name="M:city_events.webAPI.Controllers.EventController.DeleteEvent(System.Guid)">
+            <summary>
+            Delete events
+            </summary>
+            <param name="events"></param>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.EventController.GetEvent(System.Guid)">
+            <summary>
+            Get event
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.EventController.UpdateEvent(System.Guid,city_events.webAPI.Models.UpdateEventRequest)">
+            <summary>
+            Update event
+            </summary>
+        </member>
+        <member name="T:city_events.webAPI.Controllers.FavoriteController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.FavoriteController.#ctor(city_events.Services.Abstract.IFavoriteService,AutoMapper.IMapper)">
+            <summary>
+            favorite controller
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.FavoriteController.GetFavorites(System.Int32,System.Int32)">
+            <summary>
+            Get favorites by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.FavoriteController.DeleteFavorite(System.Guid)">
+            <summary>
+            Delete events
+            </summary>
+            <param name="favorites"></param>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.FavoriteController.GetFavorite(System.Guid)">
+            <summary>
+            Get city
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.FavoriteController.UpdateFavorite(System.Guid,city_events.webAPI.Models.FavotiteResponses)">
+            <summary>
+            Update favorite
+            </summary>
+        </member>
+        <member name="T:city_events.webAPI.Controllers.UsersController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.#ctor(city_events.Services.Abstract.IUserService,AutoMapper.IMapper)">
+            <summary>
+            Users controller
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.GetUsers(System.Int32,System.Int32)">
+            <summary>
+            Get users by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.DeleteUser(System.Guid)">
             <summary>
             Delete users
             </summary>
-            <param name="user"></param>
-        </member>
-        <member name="M:city_events.webAPI.Controllers.UsersController.PostUsers(city_events.Entity.Models.User)">
-            <summary>
-            Post users
-            </summary>
             <param name="users"></param>
         </member>
-        <member name="M:city_events.webAPI.Controllers.UsersController.Updatesers(city_events.Entity.Models.User)">
+        <member name="M:city_events.webAPI.Controllers.UsersController.GetUser(System.Guid)">
+            <summary>
+            Get user
+            </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.UsersController.UpdateUser(System.Guid,city_events.webAPI.Models.UpdateUserRequest)">
             <summary>
             Update users
             </summary>
-            <param name="users"></param>
         </member>
     </members>
 </doc>

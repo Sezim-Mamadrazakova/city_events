@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using city_events.Entity;
-namespace city_events.webAPI.AppConfiguration.ServicesExtentions;
+namespace city_events.webAPI.AppConfiguration.ServicesExtensions;
 public static partial class ServicesExtensions
 {
     /// <summary>

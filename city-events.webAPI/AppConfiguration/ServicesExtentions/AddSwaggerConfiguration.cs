@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;
-namespace city_events.webAPI.AppConfiguration.ServicesExtentions{
+namespace city_events.webAPI.AppConfiguration.ServicesExtensions{
     public static partial class ServicesExtensions
     {
         private static string AppTitle = "City_events Web API";

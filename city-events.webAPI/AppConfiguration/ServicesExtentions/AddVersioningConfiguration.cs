@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-namespace city_events.webAPI.AppConfiguration.ServicesExtentions{
-    public static partial class ServicesExtentions{
+namespace city_events.webAPI.AppConfiguration.ServicesExtensions{
+    public static partial class ServicesExtensions{
         public static void AddVersioningConfiguration(this IServiceCollection services){
             services.AddVersionedApiExplorer(option =>{
                 option.GroupNameFormat="'v' VVV";

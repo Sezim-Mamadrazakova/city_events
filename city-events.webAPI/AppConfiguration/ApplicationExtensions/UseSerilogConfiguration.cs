@@ -1,5 +1,5 @@
 using Serilog;
-namespace city_events.webAPI.AppConfiguration.ApplicationExtentions{
+namespace city_events.webAPI.AppConfiguration.ApplicationExtensions{
     public static partial class AppExtensions
     {
         /// <summary>

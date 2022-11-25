@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;
-namespace city_events.webAPI.AppConfiguration.ApplicationExtentions{
+namespace city_events.webAPI.AppConfiguration.ApplicationExtensions{
     public static partial class AppExtensions
     {
         /// <summary>

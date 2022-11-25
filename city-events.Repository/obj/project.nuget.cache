@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FNQFUEPqxx1xO2m9/irquUt1qFHLJeQWeJXZ52gEmevgwOVihT8d9k+8t2NI4Ul77Su8w7OEbUVOKJUtqjCmkw==",
+  "dgSpecHash": "oUJ3rVWNV14+wss0Xser8xGzZ3Z/uN4OwCl09PwfLJL+mDb+G/S9znMYIlMKeoqfBkHDQ6UZ/58+8duwg6O80Q==",
   "success": true,
   "projectFilePath": "C:\\net_project\\city-events.Repository\\city-events.Repository.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Сезим\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Сезим\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Сезим\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Сезим\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Сезим\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Сезим\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Сезим\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Сезим\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

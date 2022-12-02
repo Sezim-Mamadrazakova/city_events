@@ -96,6 +96,16 @@ namespace city_events.webAPI.Controllers
             return BadRequest(ex.ToString());
            }
         }
+        /// <summary>
+        /// create admin
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateAdmin([FromBody] AdminModel admin)
+        {
+            var response =adminService.CreateAdmin(admin);
+            return Ok(response);
+        }
           
     }
 

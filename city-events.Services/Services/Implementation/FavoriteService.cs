@@ -63,5 +63,10 @@ public class FavoriteService :IFavoriteService{
         existingFavorite = favoriteRepository.Save(existingFavorite);
         return mapper.Map<FavoriteModel>(existingFavorite);
     }
+    FavoriteModel IFavoriteService.CreateFavorite(CreateFavoriteModel createFavorite)
+    {
+      var fav= mapper.Map<Entity.Models.Favorites>(createFavorite);
+       return mapper.Map<FavoriteModel>(favoriteRepository.Save(fav));
+    }
 
 }

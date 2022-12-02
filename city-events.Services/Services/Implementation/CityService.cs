@@ -56,4 +56,9 @@ public class CityService :ICityService
         existingCity = cityRepository.Save(existingCity);
         return mapper.Map<CityModel>(existingCity);
     }
+    CityModel ICityService.CreateCity(CityModel cityModel)
+    {
+      cityRepository.Save(mapper.Map<Entity.Models.City>(cityModel));
+        return cityModel;
+    }
 }

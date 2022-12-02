@@ -59,4 +59,9 @@ public class EventService :IEventService
         existingEvent = eventRepository.Save(existingEvent);
         return mapper.Map<EventModel>(existingEvent);
     }
+    EventModel IEventService.CreateEvent(CreateEventModel createEvent)
+    {
+      var events= mapper.Map<Entity.Models.Events>(createEvent);
+       return mapper.Map<EventModel>(eventRepository.Save(events));
+    }
 }

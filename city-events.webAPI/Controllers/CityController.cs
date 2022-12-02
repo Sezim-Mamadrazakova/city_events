@@ -95,6 +95,16 @@ namespace city_events.webAPI.Controllers
             return BadRequest(ex.ToString());
            }
         }
+        /// <summary>
+        /// create city
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateCity([FromBody] CityModel city)
+        {
+            var response =cityServise.CreateCity(city);
+            return Ok(response);
+        }
           
     }
 

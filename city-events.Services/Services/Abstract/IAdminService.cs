@@ -9,4 +9,5 @@ public interface IAdminService
     void DeleteAdmin(Guid id);
 
     PageModel<AdminPreviewModel> GetAdmins(int limit = 20, int offset = 0);
+    AdminModel CreateAdmin(AdminModel adminModel);
 }

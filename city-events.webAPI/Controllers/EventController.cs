@@ -95,6 +95,28 @@ namespace city_events.webAPI.Controllers
             return BadRequest(ex.ToString());
            }
         }
+        /// <summary>
+        /// create event
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateEvent([FromBody] CreateEventRequest events){
+            var validationResult = events.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel =eventServise.CreateEvent(mapper.Map<CreateEventModel>(events));
+                return Ok(resultModel);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+
+        }
           
     }
 

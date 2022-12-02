@@ -91,7 +91,7 @@ namespace city_events.webAPI.Controllers
             return BadRequest(ex.ToString());
            }
         }
-          
+        
     }
 
 }

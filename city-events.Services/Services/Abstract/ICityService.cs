@@ -6,4 +6,5 @@ public interface ICityService
     CityModel UpdateCity(Guid id, UpdateCityModel city);
     void DeleteCity(Guid id);
     PageModel<CityPreviewModel> GetCitys(int limit = 20, int offset = 0);
+    CityModel CreateCity(CityModel city);
 }

@@ -56,4 +56,10 @@ public class AdminService :IAdminService
         existingAdmin = adminRepository.Save(existingAdmin);
         return mapper.Map<AdminModel>(existingAdmin);
     }
+    AdminModel IAdminService.CreateAdmin(AdminModel adminModel)
+    {
+      adminRepository.Save(mapper.Map<Entity.Models.Admin>(adminModel));
+        return adminModel;
+    }
+    
 }

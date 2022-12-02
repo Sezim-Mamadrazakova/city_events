@@ -70,6 +70,12 @@
             Update admin
             </summary>
         </member>
+        <member name="M:city_events.webAPI.Controllers.AdminController.CreateAdmin(city_events.Services.Models.AdminModel)">
+            <summary>
+            create admin
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:city_events.webAPI.Controllers.CityController">
             <summary>
             </summary>
@@ -101,6 +107,12 @@
             Update event
             </summary>
         </member>
+        <member name="M:city_events.webAPI.Controllers.CityController.CreateCity(city_events.Services.Models.CityModel)">
+            <summary>
+            create city
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:city_events.webAPI.Controllers.EventController">
             <summary>
             </summary>
@@ -131,6 +143,12 @@
             <summary>
             Update event
             </summary>
+        </member>
+        <member name="M:city_events.webAPI.Controllers.EventController.CreateEvent(city_events.webAPI.Models.CreateEventRequest)">
+            <summary>
+            create event
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:city_events.webAPI.Controllers.FavoriteController">
             <summary>

@@ -1,0 +1,12 @@
+C:\net_project\city-events.Shared\bin\Debug\net6.0\city-events.Shared.deps.json
+C:\net_project\city-events.Shared\bin\Debug\net6.0\city-events.Shared.dll
+C:\net_project\city-events.Shared\bin\Debug\net6.0\city-events.Shared.pdb
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.csproj.AssemblyReference.cache
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.AssemblyInfoInputs.cache
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.AssemblyInfo.cs
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.csproj.CoreCompileInputs.cache
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.dll
+C:\net_project\city-events.Shared\obj\Debug\net6.0\refint\city-events.Shared.dll
+C:\net_project\city-events.Shared\obj\Debug\net6.0\city-events.Shared.pdb
+C:\net_project\city-events.Shared\obj\Debug\net6.0\ref\city-events.Shared.dll

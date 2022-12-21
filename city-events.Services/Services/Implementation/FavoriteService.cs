@@ -7,6 +7,8 @@ using city_events.Services.Models;
 namespace city_events.Services.Implementation;
 public class FavoriteService :IFavoriteService{
     private readonly IRepository<Favorites> favoriteRepository;
+    private readonly IRepository<User> userRepository;
+    private readonly IRepository<Events> eventRepository;
     private readonly IMapper mapper;
     public FavoriteService(IRepository<Favorites> favoriteRepository, IMapper mapper)
     {
@@ -63,10 +65,30 @@ public class FavoriteService :IFavoriteService{
         existingFavorite = favoriteRepository.Save(existingFavorite);
         return mapper.Map<FavoriteModel>(existingFavorite);
     }
-    FavoriteModel IFavoriteService.CreateFavorite(CreateFavoriteModel createFavorite)
+    FavoriteModel IFavoriteService.CreateFavorite(FavoriteModel favoriteModel)
     {
-      var fav= mapper.Map<Entity.Models.Favorites>(createFavorite);
-       return mapper.Map<FavoriteModel>(favoriteRepository.Save(fav));
+      if(favoriteRepository.GetAll(x=>x.Id==favoriteModel.Id).FirstOrDefault()!=null)
+      {
+        throw new Exception("create not uniqe subject");
+      }
+      Favorites createFavorite=new Favorites();
+      createFavorite.Id=favoriteModel.Id;
+      createFavorite.CreationTime=favoriteModel.CreationTime;
+      createFavorite.ModificationTime=favoriteModel.ModificationTime;
+      createFavorite.UserId=favoriteModel.UserId;
+      createFavorite.EventsId=favoriteModel.EventsId;
+      createFavorite.User=userRepository.GetAll(x=>x.Id==createFavorite.UserId).FirstOrDefault();
+      if(createFavorite.User==null)
+        throw new Exception("not found id User");
+      createFavorite.Events=eventRepository.GetAll(x=>x.Id==createFavorite.EventsId).FirstOrDefault();
+      if(createFavorite.Events==null){
+        throw new Exception("not found id Event");
+      }
+      createFavorite.Events.Favorites.Add(createFavorite);
+      createFavorite.User.Favorite.Add(createFavorite);
+      favoriteRepository.Save(mapper.Map<Favorites>(createFavorite));
+      return favoriteModel;
+
     }
 
 }

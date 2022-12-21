@@ -1,21 +1,20 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using city_events.Entity.Models;
+using Microsoft.AspNetCore.Identity;
+
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace city_events.Entity;
 
-public class Context : DbContext
+
+public class Context : IdentityDbContext<User, UserRole, Guid>
 {
-    public DbSet<User>? Users { get; set; }
-    public DbSet<Events>? Events { get; set; }
-    public DbSet<Favorites>? Favorites { get; set; }
-    public DbSet<City>? City { get; set; }
-    public DbSet<Admin>? Admin { get; set; }
-    
 
     public Context(DbContextOptions<Context> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        base.OnModelCreating(builder);
         #region Admin
 
         builder.Entity<Admin>().ToTable("admin");
@@ -29,6 +28,12 @@ public class Context : DbContext
                                     .WithMany(x => x.Users)
                                     .HasForeignKey(x => x.CityId)
                                     .OnDelete(DeleteBehavior.Cascade);
+        builder.Entity<IdentityUserClaim<Guid>>().ToTable("user_claims");
+        builder.Entity<IdentityUserLogin<Guid>>().ToTable("user_logins");
+        builder.Entity<IdentityUserToken<Guid>>().ToTable("user_tokens");
+        builder.Entity<UserRole>().ToTable("user_roles");
+        builder.Entity<IdentityRoleClaim<Guid>>().ToTable("user_role_claims");
+        builder.Entity<IdentityUserRole<Guid>>().ToTable("user_role_owners");
 
 
         #endregion

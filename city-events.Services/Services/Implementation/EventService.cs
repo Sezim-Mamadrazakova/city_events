@@ -59,9 +59,21 @@ public class EventService :IEventService
         existingEvent = eventRepository.Save(existingEvent);
         return mapper.Map<EventModel>(existingEvent);
     }
-    EventModel IEventService.CreateEvent(CreateEventModel createEvent)
+    EventModel IEventService.CreateEvent(EventModel eventModel)
     {
-      var events= mapper.Map<Entity.Models.Events>(createEvent);
-       return mapper.Map<EventModel>(eventRepository.Save(events));
+        if(eventRepository.GetAll(x=>x.Id==eventModel.Id).FirstOrDefault()!=null)
+        {
+            throw new Exception ("Attempt to create a non-unique object!");
+        }
+        EventModel createEvent=new EventModel();
+        createEvent.UserId=eventModel.UserId;
+        createEvent.EventName=eventModel.EventName;
+        createEvent.EventPlace=eventModel.EventPlace;
+        createEvent.DateStart=eventModel.DateStart;
+        createEvent.DateFinish=eventModel.DateFinish;
+        eventRepository.Save(mapper.Map<Events>(createEvent));
+        return createEvent;        
+
     }
+    
 }

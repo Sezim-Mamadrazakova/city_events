@@ -13,5 +13,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10"/>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0"/>
+    <PackageReference Include="Duende.IdentityServer" Version="6.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\scooters.Shared\scooters.Shared.csproj" />
   </ItemGroup>
 </Project>

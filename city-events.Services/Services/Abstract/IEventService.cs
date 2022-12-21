@@ -10,5 +10,5 @@ public interface IEventService
     void DeleteEvent(Guid id);
 
     PageModel<EventPreviewModel> GetEvents(int limit = 20, int offset = 0);
-    EventModel CreateEvent(CreateEventModel createEvent);
+    EventModel CreateEvent(EventModel eventModel);
 }

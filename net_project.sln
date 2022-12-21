@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "city-events.Repository", "c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "city-events.Services", "city-events.Services\city-events.Services.csproj", "{A96FD06C-EC58-47BA-BF13-3E1118D18B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "city-events.Shared", "city-events.Shared\city-events.Shared.csproj", "{1724F94F-CB0C-401D-A5EF-38A2FB3F7967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{A96FD06C-EC58-47BA-BF13-3E1118D18B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96FD06C-EC58-47BA-BF13-3E1118D18B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96FD06C-EC58-47BA-BF13-3E1118D18B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1724F94F-CB0C-401D-A5EF-38A2FB3F7967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1724F94F-CB0C-401D-A5EF-38A2FB3F7967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1724F94F-CB0C-401D-A5EF-38A2FB3F7967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1724F94F-CB0C-401D-A5EF-38A2FB3F7967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

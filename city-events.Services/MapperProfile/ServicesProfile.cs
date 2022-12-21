@@ -4,6 +4,12 @@ using city_events.Services.Models;
 namespace city_events.Services.MapperProfile;
 public class ServicesProfile: Profile{
     public ServicesProfile(){
+        #region Admin
+        CreateMap<Admin, AdminModel>().ReverseMap();
+        CreateMap<Admin, AdminPreviewModel>()
+            .ForMember(x => x.Login, y => y.MapFrom(u => u.Login));
+
+        #endregion
         #region Users
         CreateMap<User, UserModel>().ReverseMap();
         CreateMap<UserModel, UserPreviewModel>()

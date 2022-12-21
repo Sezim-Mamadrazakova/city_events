@@ -100,24 +100,11 @@ namespace city_events.webAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult CreateEvent([FromBody] CreateEventRequest events){
-            var validationResult = events.Validate();
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
-            try
-            {
-                var resultModel =eventServise.CreateEvent(mapper.Map<CreateEventModel>(events));
-                return Ok(resultModel);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+        public IActionResult CreateEvent([FromBody] EventModel eventModel){
+            var response=eventServise.CreateEvent(eventModel);
+            return Ok(response);
 
         }
           
     }
-
 }

@@ -4,6 +4,12 @@
         <name>city-events.webAPI</name>
     </assembly>
     <members>
+        <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseAuthorizationConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use serilog configuration
+            </summary>
+            <param name="app"></param>
+        </member>
         <member name="M:city_events.webAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Use serilog configuration
@@ -15,6 +21,12 @@
             Use swagger configuration
             </summary>
             <param name="app"></param>
+        </member>
+        <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddAuthorizationConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
         </member>
         <member name="M:city_events.webAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
@@ -144,7 +156,7 @@
             Update event
             </summary>
         </member>
-        <member name="M:city_events.webAPI.Controllers.EventController.CreateEvent(city_events.webAPI.Models.CreateEventRequest)">
+        <member name="M:city_events.webAPI.Controllers.EventController.CreateEvent(city_events.Services.Models.EventModel)">
             <summary>
             create event
             </summary>
@@ -210,6 +222,16 @@
         <member name="M:city_events.webAPI.Controllers.UsersController.UpdateUser(System.Guid,city_events.webAPI.Models.UpdateUserRequest)">
             <summary>
             Update users
+            </summary>
+        </member>
+        <member name="T:CityForum.webAPI.Controllers.AuthController">
+            <summary>
+            Auth endpoints
+            </summary>
+        </member>
+        <member name="M:CityForum.webAPI.Controllers.AuthController.#ctor(city_events.Services.Abstract.IAuthService,AutoMapper.IMapper)">
+            <summary>
+            Auth controller
             </summary>
         </member>
     </members>

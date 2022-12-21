@@ -13,3 +13,5 @@ C:\net_project\city-events.Repository\obj\Debug\net6.0\city-events.Repository.dl
 C:\net_project\city-events.Repository\obj\Debug\net6.0\refint\city-events.Repository.dll
 C:\net_project\city-events.Repository\obj\Debug\net6.0\city-events.Repository.pdb
 C:\net_project\city-events.Repository\obj\Debug\net6.0\ref\city-events.Repository.dll
+C:\net_project\city-events.Repository\bin\Debug\net6.0\city-events.Shared.dll
+C:\net_project\city-events.Repository\bin\Debug\net6.0\city-events.Shared.pdb

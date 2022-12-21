@@ -3,7 +3,7 @@ using city_events.Entity;
 using city_events.Repository;
 using city_events.Services;
 using city_events.webAPI.AppConfiguration.ServicesExtensions;
-
+using city_events.webAPI.AppConfiguration;
 
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -22,12 +22,14 @@ builder.Services.AddRepositoryConfiguration();
 builder.Services.AddBusinessLogicConfiguration();
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddMapperConfiguration();
+builder.Services.AddAuthorizationConfiguration(configuration);//1
 
 //temporary
 builder.Services.AddScoped<DbContext, Context>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
+await RepositoryInitializer.InitializeRepository(app);
 
 app.UseSerilogConfiguration();
 
@@ -38,7 +40,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
+app.UseAuthorization();//2
+app.UseMiddleware(typeof(ExceptionsMiddleware));
 app.MapControllers();
 
 try

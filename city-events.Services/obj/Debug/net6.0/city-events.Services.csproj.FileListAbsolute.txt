@@ -15,3 +15,5 @@ C:\net_project\city-events.Services\obj\Debug\net6.0\city-events.Services.dll
 C:\net_project\city-events.Services\obj\Debug\net6.0\refint\city-events.Services.dll
 C:\net_project\city-events.Services\obj\Debug\net6.0\city-events.Services.pdb
 C:\net_project\city-events.Services\obj\Debug\net6.0\ref\city-events.Services.dll
+C:\net_project\city-events.Services\bin\Debug\net6.0\city-events.Shared.dll
+C:\net_project\city-events.Services\bin\Debug\net6.0\city-events.Shared.pdb

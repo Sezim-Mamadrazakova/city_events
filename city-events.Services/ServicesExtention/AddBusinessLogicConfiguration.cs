@@ -15,5 +15,6 @@ public static partial class ServicesExtensions
         services.AddScoped<ICityService, CityService>();
         services.AddScoped<IEventService, EventService>();
         services.AddScoped<IFavoriteService, FavoriteService>();
+        services.AddScoped<IAuthService, AuthService>();
     }
 }

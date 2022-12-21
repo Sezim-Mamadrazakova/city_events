@@ -58,8 +58,14 @@ public class AdminService :IAdminService
     }
     AdminModel IAdminService.CreateAdmin(AdminModel adminModel)
     {
-      adminRepository.Save(mapper.Map<Entity.Models.Admin>(adminModel));
-        return adminModel;
+      if(adminRepository.GetAll(x=>x.Id==adminModel.Id).FirstOrDefault()!=null)
+       {
+        throw new Exception ("Attempt to create a non-unique object!");
+       }
+       AdminModel create=new AdminModel();
+       create.Login=adminModel.Login;
+       adminRepository.Save(mapper.Map<Entity.Models.Admin>(create));
+       return create;
     }
     
 }

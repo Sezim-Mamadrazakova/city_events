@@ -6,5 +6,5 @@ public interface IFavoriteService
     FavoriteModel UpdateFavorite(Guid id, FavoriteModel fav);
     void DeleteFavorite(Guid id);
     PageModel<FavoriteModel> GetFavorites(int limit = 20, int offset = 0);
-    FavoriteModel CreateFavorite(CreateFavoriteModel createFavorite);
+    FavoriteModel CreateFavorite(FavoriteModel favoriteModel);
 }
